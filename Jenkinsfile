@@ -83,7 +83,7 @@ pipeline {
                     echo "===== Health Check ====="
 
                     sleep 10
- 
+                    docker compose restart nginx
                     docker compose ps
 
                     echo "===== Nginx Reload ====="
