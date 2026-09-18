@@ -18,17 +18,17 @@ pipeline {
 
         stage('Create .env'){
             steps {
-                withCredential([
+                withCredentials([
                     string(
-                        credentialId: 'oracle_url',
+                        credentialsId: 'oracle_url',
                         variable: 'DB_URL'
                     ),
                     string(
-                        credentialId: 'oracle_name',
+                        credentialsId: 'oracle_name',
                         variable: 'DB_USERNAME'
                     ),
                     string(
-                        credentialId: 'oracle_pwd',
+                        credentialsId: 'oracle_pwd',
                         variable: 'DB_PASSWORD'
                     )
                 ]){
