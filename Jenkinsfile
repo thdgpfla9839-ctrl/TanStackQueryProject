@@ -63,6 +63,9 @@ pipeline {
         stage('Rolling Deploy') {
             steps {
                 sh '''
+                    cp docker-compose.yml ${APP_DIR}/
+                    cp -r nginx ${APP_DIR}/
+                    
                     cd ${APP_DIR}
 
                     echo "===== 최신 이미지 확인 ====="
