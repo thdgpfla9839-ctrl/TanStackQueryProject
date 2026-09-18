@@ -41,7 +41,7 @@ pipeline {
                        chmod 600 .env
                        '''
                 }
-            }
+            } 
         } 
         stage('Build') {
             steps {
