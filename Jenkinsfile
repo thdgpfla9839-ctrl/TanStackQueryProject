@@ -64,7 +64,7 @@ pipeline {
             steps {
                 sh '''
                     cp docker-compose.yml ${APP_DIR}/
-                    
+                    cp .env ${APP_DIR}/
                     
                     cd ${APP_DIR}
 
