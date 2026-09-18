@@ -6,7 +6,8 @@ services:
   app:
     image: react-app:latest
     restart: always
-
+    env_file:
+        - .env
     environment:
       SPRING_PROFILES_ACTIVE: prod
 
