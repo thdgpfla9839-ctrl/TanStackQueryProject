@@ -47,7 +47,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x gradlew
-                    ./gradlew clean package -DskipTests
+                    ./gradlew clean build -x test
                 '''
             }
         }
