@@ -86,8 +86,7 @@ pipeline {
                     docker compose restart nginx
                     docker compose ps
 
-                    echo "===== Nginx Reload ====="
-                    docker exec nginx nginx -s reload
+                    
 
                     echo "===== 배포 완료 ====="
                 '''
