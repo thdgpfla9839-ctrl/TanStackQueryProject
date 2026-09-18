@@ -1,10 +1,11 @@
 #port => default : 8080 => 
 #spring => 데이터베이스 (datasource)
+# LOCAL_DB_URL => jdbc어떠고 로컬아이피 환경변수 새로 만듦
 
 spring:
   datasource:
-    url: ${DB_URL} 
-    username: ${DB_USERNAME} 
+    url: ${LOCAL_DB_URL} 
+    username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: oracle.jdbc.driver.OracleDriver 
   thymeleaf:
