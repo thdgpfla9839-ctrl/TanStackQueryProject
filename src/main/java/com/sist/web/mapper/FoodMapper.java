@@ -13,7 +13,7 @@ public interface FoodMapper {
 
 	/*
 	 *  <select id="foodListData" resultType="com.sist.web.vo.FoodVO" parameterType="string">
-		  SELECT no,poster,name,score,theme,type
+		  SELECT no,poster,name,score,theme,type => 이만큼이 리스트 안에 들어갈 데이터
 		  FROM food
 		   <if test="search!=null and search!=''">
 		     WHERE address type LIKE CONCAT('%',#{search},'%') 
@@ -35,4 +35,12 @@ public interface FoodMapper {
 		 </select>
 	 */
 	public int foodListTotalPage(String search);
+	
+	/*
+	 *   <select id="foodDetailData" resultType="com.sist.web.vo.FoodVO" parameterType="int">
+		  SELECT * FROM food
+		  WHERE no=#{no}
+		 </select>
+	 */
+	public FoodVO foodDetailData(int no);
 }

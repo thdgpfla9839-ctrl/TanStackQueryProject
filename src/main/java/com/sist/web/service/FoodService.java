@@ -32,4 +32,8 @@ public class FoodService {
 		return fMapper.foodListTotalPage(search);
 	}
 	
+	public FoodVO foodDetailData(int no)
+	{
+		return fMapper.foodDetailData(no);
+	}
 }
